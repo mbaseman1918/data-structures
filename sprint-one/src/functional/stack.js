@@ -1,8 +1,8 @@
 var Stack = function() {
-  var counter = 0;
+
   var someInstance = {
   };
-
+  var counter = 0;
   // Use an object with numeric keys to store values
   var storage = {};
 
