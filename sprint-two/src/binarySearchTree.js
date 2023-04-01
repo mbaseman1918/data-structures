@@ -44,6 +44,21 @@ binarySearchTreeMethods.depthFirstLog = function(callback) {
   }
 };
 
+binarySearchTreeMethods.nodeCounter = function() {
+  var countNode = 1;
+  var countNullNode = 0;
+  if (this.left !== null) {
+    countNode += this.left.nodeCounter()['nodes'];
+  } else {
+    countNullNode++;
+  }
+  if (this.right !== null) {
+    countNode += this.left.nodeCounter()['nodes'];
+  } else {
+    countNullNode++;
+  }
+  return {'nodes': countNode, 'empty nodes': countNullNode};
+};
 /*
  * Complexity: What is the time complexity of the above functions?
  */
