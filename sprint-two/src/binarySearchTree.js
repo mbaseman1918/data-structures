@@ -49,11 +49,13 @@ binarySearchTreeMethods.nodeCounter = function() {
   var countNullNode = 0;
   if (this.left !== null) {
     countNode += this.left.nodeCounter()['nodes'];
+    countNullNode += this.left.nodeCounter()['empty nodes'];
   } else {
     countNullNode++;
   }
   if (this.right !== null) {
-    countNode += this.left.nodeCounter()['nodes'];
+    countNode += this.right.nodeCounter()['nodes'];
+    countNullNode += this.right.nodeCounter()['empty nodes'];
   } else {
     countNullNode++;
   }
