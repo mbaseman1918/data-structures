@@ -57,6 +57,10 @@ Graph.prototype.forEachNode = function(cb) {
   }
 };
 
+Graph.prototype.printCurrentNodes = function() {
+  return Object.keys(this.nodes);
+};
+
 /*
  * Complexity: What is the time complexity of the above functions?
  */
