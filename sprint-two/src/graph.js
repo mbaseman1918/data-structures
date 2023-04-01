@@ -27,8 +27,6 @@ Graph.prototype.removeNode = function(node) {
   for (var key in this.nodes[node]) {
     var targetNode = this.nodes[node][key];
     var currentNode = this.nodes[key][node];
-    console.log('target', targetNode);
-    console.log('current connection', currentNode);
     this.removeEdge(targetNode, currentNode);
   }
   delete this.nodes[node];
