@@ -51,7 +51,15 @@ HashTable.prototype.remove = function(k) {
   this._storage.set(index, updatedArray);
 };
 
-
+HashTable.prototype.checkStorage = function() {
+  var counter = 0;
+  for (var i = 0; i < this._limit; i++) {
+    if (this._storage.get(i) !== undefined) {
+      counter++;
+    }
+  }
+  return counter;
+};
 
 /*
  * Complexity: What is the time complexity of the above functions?
