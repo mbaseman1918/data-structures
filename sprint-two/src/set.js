@@ -23,6 +23,16 @@ setPrototype.remove = function(item) {
   delete this._storage[item];
 };
 
+setPrototype.count = function(item) {
+  var counter = 0;
+  for (var key in this._storage) {
+    if (this._storage[key] === item) {
+      counter++;
+    }
+  }
+  return counter;
+};
+
 /*
  * Complexity: What is the time complexity of the above functions?
  */

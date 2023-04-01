@@ -23,5 +23,9 @@ describe('set', function() {
     set.remove('Mel Gibson');
     expect(set.contains('Mel Gibson')).to.equal(false);
   });
-
+  it('should only have one copy of a values in  a set', function() {
+    set.add('Mel Gibson');
+    set.add('Mel Gibson');
+    expect(set.count('Mel Gibson')).to.equal(1);
+  });
 });
